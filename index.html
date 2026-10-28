@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpukat Kocok APACOK</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        avo: {
+                            50: '#f2fcf5',
+                            100: '#e1f8e8',
+                            200: '#c3f0d2',
+                            300: '#94e2b1',
+                            400: '#5ecc88',
+                            500: '#3ab26a',
+                            600: '#289151',
+                            700: '#237343',
+                            800: '#1e5b37',
+                            900: '#1a4b2f',
+                            DEFAULT: '#72B51F', // Custom brand vibrant green
+                        },
+                        choco: {
+                            DEFAULT: '#4A2B15', // Brand dark brown
+                            light: '#6E4525'
+                        }
+                    },
+                    boxShadow: {
+                        'up': '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f3f4f6; /* Light gray to contrast the mobile container */
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-container {
+            max-width: 480px; /* Mobile app width */
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        .menu-image-placeholder {
+            background: linear-gradient(135deg, #a7f3d0 0%, #34d399 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <div class="mobile-container pb-28 flex flex-col">
+        
+        <!-- Header / Hero Section -->
+        <header class="relative bg-choco text-white overflow-hidden rounded-b-3xl shadow-lg z-10">
+            <!-- Background pattern/gradient -->
+            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-avo rounded-full blur-3xl opacity-40"></div>
+            
+            <div class="relative z-10 px-6 pt-10 pb-8 flex flex-col items-center text-center">
+                <!-- Using the provided logo image -->
+                <img src="WhatsApp Image 2026-10-28 at 16.24.10.jpeg" alt="Logo APACOK" 
+                     class="w-32 h-32 object-cover rounded-full border-4 border-avo shadow-lg mb-4 bg-white"
+                     onerror="this.src='https://placehold.co/200x200/72B51F/ffffff?text=APACOK'">
+                
+                <h1 class="text-3xl font-extrabold tracking-wide text-avo-100 drop-shadow-md">APACOK</h1>
+                <p class="text-sm font-semibold tracking-widest uppercase text-yellow-400 mb-1">Alpukat Kocok</p>
+                
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mt-2 border border-white/30">
+                    <p class="text-sm font-medium italic">"Pokoknya Mantap, Rasanya Nikmat!"</p>
+                </div>
+                <p class="text-xs mt-3 text-gray-200">Minuman Sehat Dengan Alpukat Asli</p>
+            </div>
+        </header>
+
+        <!-- Promotional Banner (Poster) -->
+        <section class="px-5 mt-6">
+            <div class="rounded-2xl overflow-hidden shadow-md">
+                <img src="WhatsApp Image 2026-10-28 at 16.30.23.jpg" alt="Menu Poster" class="w-full h-auto"
+                     onerror="this.style.display='none'">
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="px-5 mt-8 flex-1">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-choco">Menu Favorit 🥑</h2>
+                <span class="text-xs font-semibold bg-avo-100 text-avo-700 px-2 py-1 rounded-md">100% Asli</span>
+            </div>
+
+            <!-- Dynamic Menu List -->
+            <div id="menu-list" class="flex flex-col gap-4">
+                <!-- Menu items will be injected here by JS -->
+            </div>
+        </section>
+
+        <hr class="mx-5 my-8 border-gray-200 border-dashed border-2">
+
+        <!-- Customer Feedback Funnel -->
+        <section class="px-5 mb-8">
+            <div class="bg-yellow-50 rounded-2xl p-5 border border-yellow-200 shadow-sm text-center">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mx-auto shadow-sm mb-3">
+                    🤔
+                </div>
+                <h3 class="font-bold text-choco mb-1">Bagaimana pesanan Anda hari ini?</h3>
+                <p class="text-xs text-gray-600 mb-4">Bantu kami menjadi lebih baik dengan memberikan ulasan Anda.</p>
+                
+                <div class="flex flex-col gap-3">
+                    <!-- Bintang 5 / Puas -->
+                    <a href="https://maps.app.goo.gl/pBSaS1hNVtRxbEDL9" target="_blank" rel="noopener noreferrer"
+                       class="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-800 py-3 rounded-xl font-bold shadow-sm hover:bg-gray-50 transition-colors active:scale-95">
+                        <span class="text-yellow-400 text-lg"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        Sangat Puas!
+                    </a>
+                    
+                    <!-- Keluhan / Saran -->
+                    <a href="https://wa.me/6283827500732?text=Halo%20Mas%20Apip%2C%20Saya%20ingin%20menyampaikan%20saran%2Fkeluhan%20terkait%20pesanan%20saya%20..." target="_blank" rel="noopener noreferrer"
+                       class="w-full flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-600 py-3 rounded-xl font-semibold shadow-sm hover:bg-gray-50 transition-colors active:scale-95 text-sm">
+                        <i class="fa-regular fa-comment-dots text-gray-400 text-lg"></i>
+                        Ada Keluhan atau Saran?
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Bottom Cart / Checkout -->
+        <div id="cart-bar" class="fixed bottom-0 left-0 right-0 bg-white shadow-up p-4 z-50 transform translate-y-full transition-transform duration-300 mx-auto" style="max-width: 480px;">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex flex-col">
+                    <span class="text-xs text-gray-500 font-medium">Total Pesanan</span>
+                    <span id="cart-total-price" class="text-lg font-bold text-choco">Rp 0</span>
+                </div>
+                <button onclick="checkoutWA()" class="flex-1 bg-avo hover:bg-avo-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-avo/30 flex items-center justify-center gap-2 transition-colors active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Pesan via WA</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Menu Data based on poster
+        const menuItems = [
+            { id: 'ori', name: 'Pucok Original', price: 10000, desc: 'Alpukat kocok mantap rasa original' },
+            { id: 'keju', name: 'Pucok Keju', price: 13000, desc: 'Topping keju melimpah' },
+            { id: 'oreo', name: 'Pucok Oreo', price: 13000, desc: 'Taburan oreo renyah' },
+            { id: 'coklat', name: 'Pucok Coklat', price: 13000, desc: 'Manisnya coklat lumer' },
+            { id: 'milo', name: 'Pucok Milo', price: 15000, desc: 'Premium taste Nestle Milo' },
+            { id: 'matcha', name: 'Pucok Matcha', price: 15000, desc: 'Sensasi green tea matcha premium' },
+            { id: 'dencow', name: 'Pucok Dencow', price: 15000, desc: 'Creamy susu Nestle Dancow' }
+        ];
+
+        // State
+        let cart = {};
+        const waNumber = "6283827500732";
+
+        // Utility: Format Currency
+        const formatRupiah = (number) => {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+        };
+
+        // Initialize Menu UI
+        function initMenu() {
+            const listContainer = document.getElementById('menu-list');
+            listContainer.innerHTML = '';
+
+            menuItems.forEach(item => {
+                cart[item.id] = 0; // Initialize cart quantities
+
+                const html = `
+                    <div class="flex items-center bg-white p-3 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden group">
+                        <!-- Decorative left border -->
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-avo"></div>
+                        
+                        <div class="w-16 h-16 rounded-xl menu-image-placeholder flex items-center justify-center text-3xl shrink-0">
+                            🥑
+                        </div>
+                        
+                        <div class="ml-4 flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm md:text-base">${item.name}</h3>
+                            <p class="text-avo-600 font-semibold text-sm">${formatRupiah(item.price)}</p>
+                        </div>
+
+                        <!-- Quantity Controls -->
+                        <div class="flex items-center bg-gray-50 rounded-full border border-gray-200">
+                            <button onclick="updateQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-choco active:bg-gray-200 rounded-l-full transition-colors">
+                                <i class="fa-solid fa-minus text-xs"></i>
+                            </button>
+                            <span id="qty-${item.id}" class="w-6 text-center font-bold text-sm text-gray-800">0</span>
+                            <button onclick="updateQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-avo active:bg-gray-200 rounded-r-full transition-colors">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                listContainer.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        // Update Quantity
+        function updateQty(id, change) {
+            if (cart[id] + change < 0) return; // Prevent negative quantities
+            
+            cart[id] += change;
+            document.getElementById(`qty-${id}`).innerText = cart[id];
+            updateCartUI();
+        }
+
+        // Update Bottom Bar UI
+        function updateCartUI() {
+            let totalItems = 0;
+            let totalPrice = 0;
+
+            menuItems.forEach(item => {
+                const qty = cart[item.id];
+                if (qty > 0) {
+                    totalItems += qty;
+                    totalPrice += (qty * item.price);
+                }
+            });
+
+            const cartBar = document.getElementById('cart-bar');
+            const totalPriceEl = document.getElementById('cart-total-price');
+
+            if (totalItems > 0) {
+                totalPriceEl.innerText = formatRupiah(totalPrice);
+                // Slide up animation
+                cartBar.classList.remove('translate-y-full');
+            } else {
+                // Slide down animation
+                cartBar.classList.add('translate-y-full');
+            }
+        }
+
+        // Proceed to Checkout via WhatsApp
+        function checkoutWA() {
+            let orderList = "";
+            let totalPrice = 0;
+            let totalItems = 0;
+
+            menuItems.forEach(item => {
+                const qty = cart[item.id];
+                if (qty > 0) {
+                    orderList += `- ${qty}x ${item.name} (${formatRupiah(qty * item.price)})\n`;
+                    totalPrice += (qty * item.price);
+                    totalItems += qty;
+                }
+            });
+
+            if (totalItems === 0) return; // Failsafe
+
+            // Constructing the message based on the requirement
+            let message = `Halo Mas Apip, Mau Order Apuket kocoknya dong...\n\n`;
+            message += `*Detail Pesanan:*\n`;
+            message += orderList;
+            message += `\n*Total Tagihan: ${formatRupiah(totalPrice)}*\n\n`;
+            message += `Terima kasih! 🥑`;
+
+            // Encode and redirect
+            const encodedMessage = encodeURIComponent(message);
+            const waLink = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+            
+            window.open(waLink, '_blank');
+        }
+
+        // Initialize on load
+        window.onload = () => {
+            initMenu();
+        };
+    </script>
+</body>
+</html>
